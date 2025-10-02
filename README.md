@@ -8,7 +8,7 @@
 - Git-Flow
 
 ## 🛠️ 1. 기술 스택 선정
-- 프론트엔드 : React
+- 프론트엔드 : React-Native
 ```
 컴포넌트 기반 아키텍처: UI를 재사용 가능한 작은 부품(컴포넌트)으로 만들 수 있어,
 코드의 유지보수가 매우 쉽고 효율적임
@@ -59,19 +59,27 @@ ex) 설명 예시 (파일은 무시해도 됨.)
 # View
 
 client/
-├── src/
-│   └── App.jsx
-│
-├── publc/
-│
-├── components/      # UI 컴포넌트 (View)
-│   ├── WeatherCard.jsx
-│   └── ScheduleList.jsx
-├── pages/          # 페이지 (View)
-│   ├── HomePage.jsx
-│   └── DashboardPage.jsx
-└── services/       # API 호출 (Backend MC와 통신)
-    └── weatherService.js
+├── .expo/                    # Expo 빌드 캐시
+├── app/                      # React Native 페이지 (Expo Router)
+│   ├── _layout.js           # 레이아웃
+│   ├── index.js             # 홈/메인 페이지
+│   ├── home.js              # 홈 화면
+│   ├── sch_list.js          # 일정 목록
+│   └── sch_detail.js        # 일정 상세
+├── assets/                   # 이미지, 폰트 등 리소스
+├── components/               # 재사용 컴포넌트
+│   ├── btnsch_list.js       # 일정 목록 버튼
+│   └── plancard_home.js     # 홈 플랜 카드
+├── node_modules/             # 의존성 패키지
+├── .gitignore
+├── app.json                  # Expo 앱 설정
+├── eas.json                  # EAS Build 설정
+├── eslint.config.js          # ESLint 설정
+├── expo-env.d.ts             # TypeScript 타입
+├── package.json
+├── package-lock.json
+├── README.md
+└── tsconfig.json             # TypeScript 설정
 
 추후에 src 폴더에 components 통합시킬 수 있음.
 ```
