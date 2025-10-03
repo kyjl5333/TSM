@@ -1,13 +1,22 @@
-import { Stack, useRouter } from 'expo-router';
+import { Stack, useFocusEffect, useRouter } from 'expo-router';
+import { useCallback } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Btm_nav_bar from '../components/btm_nav_bar';
 import BtnSch_List from '../components/btnsch_list';
 import Plancard_Home from "../components/plancard_home";
+import { useNavigation } from '../contexts/navigationContext';
 
 const home = () => {
     const router = useRouter();
+    const { setActiveTab } = useNavigation();
+    useFocusEffect(
+        useCallback(() => {
+            setActiveTab('home');
+        }, [])
+    );
     return (
 
-        < View style={styles.container}>
+        <View style={styles.container}>
             <Stack.Screen options={{ headerShown: false }} />
             < View style={styles.whiteBox}>
                 < Text style={styles.header}>오늘의 일정</Text>
@@ -46,7 +55,7 @@ const home = () => {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => router.push({ pathname: "/sch_detail", params: { id: 1 } })}
+                        onPress={() => router.replace({ pathname: "/sch_detail", params: { id: 1 } })}
                     >
                         <View style={styles.planSection3}>
                             <Plancard_Home
@@ -58,6 +67,7 @@ const home = () => {
                     </TouchableOpacity>
                 </View>
             </View>
+            <Btm_nav_bar />
         </View>
     )
 }
@@ -65,7 +75,6 @@ const home = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
     },
 
@@ -79,7 +88,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
-        marginBottom: 330,
+        marginTop: 50
 
     },
     header: {
@@ -92,7 +101,7 @@ const styles = StyleSheet.create({
 
     },
     subHeader: {
-        fontSize: 16,
+        fontSize: 18,
         color: '#030303ff',
         marginTop: 4,
         marginLeft: 20,
@@ -118,9 +127,9 @@ const styles = StyleSheet.create({
 
     },
     buttonContainer: {
-        position: 'absolute', // 요소를 자유롭게 배치
-        top: 30,              // whiteBox 상단에서 20만큼 아래로
-        right: 30,            // whiteBox 오른쪽에서 20만큼 왼쪽으로
+        position: 'absolute',
+        top: 30,
+        right: 30,
     },
 });
 

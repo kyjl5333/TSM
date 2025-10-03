@@ -3,11 +3,11 @@ import { useCallback } from 'react';
 import { StyleSheet, View } from "react-native";
 import Btm_nav_bar from '../components/btm_nav_bar';
 import { useNavigation } from '../contexts/navigationContext';
-const sch_List = () => {
+const recom = () => {
     const { setActiveTab } = useNavigation();
     useFocusEffect(
         useCallback(() => {
-            setActiveTab('sch_list');
+            setActiveTab('recom');
         }, [])
     );
     return (
@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-    },
+    }
 });
-export default sch_List
+export default recom
