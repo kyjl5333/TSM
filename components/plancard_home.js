@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     },
     timeText: { fontSize: 20, marginLeft: 5 },
     titleText: { fontSize: 22, fontWeight: 'bold' },
-    locationText: { color: 'rgba(0, 0, 0, 0.5)', fontSize: 14, marginLeft: 5 },
+    locationText: { color: 'rgba(0, 0, 0, 0.8)', fontSize: 14, marginLeft: 5 },
 });
 
 export default Plancard_Home;
