@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     },
     solidBackground: {
         padding: 20,
-        backgroundColor: '#55DAFF'
+        backgroundColor: '#7fe0faff'
 
     },
     content: {
