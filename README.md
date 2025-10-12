@@ -1,6 +1,5 @@
 # 데이터베이스 테이블 
 
-# 최종 백엔-드 아키텍처 (Clean Architecture Inspired)
 ```
 Tsm/
 └──api/                  # API 계층 
