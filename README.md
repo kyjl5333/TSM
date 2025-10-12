@@ -1,7 +1,7 @@
 # 데이터베이스 테이블 
 
 # 최종 백엔-드 아키텍처 (Clean Architecture Inspired)
-
+```
 Tsm/
 └──api/                  # API 계층 
     │   ├── controllers/      # 1. 요청 수신 및 응답 반환
@@ -36,3 +36,4 @@ Tsm/
     │       ├── map.service.js      # 지도 API (경로, 시간 계산)
     │       ├── weather.service.js  # 날씨 API
     │       └── oauth.service.js    # 소셜 로그인
+```
