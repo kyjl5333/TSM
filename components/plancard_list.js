@@ -7,11 +7,11 @@ const Plancard_List = ({ time, title, location, weather, departureLocation, tran
             <View style={styles.mainContent}>
                 <View style={styles.leftSection}>
                     <View style={styles.infoRow}>
-                        <Ionicons name="time-outline" size={16} color="#000" />
+                        <Ionicons name="time-outline" size={18} color="#000" />
                         <Text style={styles.infoText}>{time}</Text>
                     </View>
                     <View style={styles.infoRow}>
-                        <Ionicons name="location-outline" size={16} color="#000" />
+                        <Ionicons name="location-outline" size={18} color="#000" />
                         <Text style={styles.infoText}>{location}</Text>
                     </View>
                     <View style={styles.infoRow}>

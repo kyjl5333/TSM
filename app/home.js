@@ -1,7 +1,7 @@
 import { Stack, useFocusEffect, useRouter } from 'expo-router';
 import { useCallback } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Btm_nav_bar from '../components/btm_nav_bar';
+import Btm_nav_bar from '../components/btn_btm_nav_bar';
 import BtnSch_List from '../components/btnsch_list';
 import Plancard_Home from "../components/plancard_home";
 import { useNavigation } from '../contexts/navigationContext';
@@ -33,7 +33,8 @@ const home = () => {
                 </View>
                 <View style={styles.allPlanSections}>
                     <TouchableOpacity
-                        onPress={() => router.push({ pathname: "/sch_detail", params: { id: 1 } })}
+                        onPress={() => router.push({ pathname: "/sch_detail", params: { id: 0 } })}
+                        activeOpacity={1}
                     >
                         <View style={styles.planSection1}>
                             <Plancard_Home
@@ -45,6 +46,7 @@ const home = () => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => router.push({ pathname: "/sch_detail", params: { id: 1 } })}
+                        activeOpacity={1}
                     >
                         <View style={styles.planSection2}>
                             <Plancard_Home
@@ -55,7 +57,7 @@ const home = () => {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => router.replace({ pathname: "/sch_detail", params: { id: 1 } })}
+                        onPress={() => router.replace({ pathname: "/sch_detail", params: { id: 2 } })}
                     >
                         <View style={styles.planSection3}>
                             <Plancard_Home

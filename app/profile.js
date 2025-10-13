@@ -1,7 +1,7 @@
 import { useFocusEffect } from 'expo-router';
 import { useCallback } from 'react';
 import { StyleSheet, View } from "react-native";
-import Btm_nav_bar from '../components/btm_nav_bar';
+import Btm_nav_bar from '../components/btn_btm_nav_bar';
 import { useNavigation } from '../contexts/navigationContext';
 const profile = () => {
     const { setActiveTab } = useNavigation();
